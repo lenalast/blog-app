@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Jensens Blog</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+
+<body>
+
+
+<div class="hero">
+    <img src="img/logo-blue-jensen-education.svg" alt="Logo">
+    <div class="textHeaders">
+        <h2>Think twice</h2>
+        <h1>Code Onc<span class="animate-letter">e</span></h1>
+    </div>
+</div>
+
+
+<button type="button" id="open-modal" class="button">Create a new post</button>
+
+<div class="modal">
+    <form id="form" onsubmit="handleSubmitForm(event)">
+        <div id="error-message"></div>
+        <h1 class="esc">PRESS ESC TO CANCEL</h1>
+        <input id="name" type="text" placeholder="Name">
+        <input id="title" type="text" placeholder="Title">
+        <textarea id="content" cols="30" rows="10" placeholder="Content text"></textarea>
+        <button class="button form" type="submit">POST</button>
+    </form>
+</div>
+
+
+<div id="blog-container"></div>
+
+
+<script src="node_modules/jquery/dist/jquery.min.js"></script>
+<script src="node_modules/moment/min/moment.min.js"></script>
+<script src="js/ajax.js"></script>
+<script src="js/main.js"></script>
+<script src="js/form.js"></script>
+</body>
+</html>

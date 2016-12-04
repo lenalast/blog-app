@@ -1,0 +1,183 @@
+body {
+    margin: 0;
+    background-color: #093C5B;;
+}
+
+h1, h2 {
+    margin: 0;
+    font-family: "Andale Mono", monospace;
+    text-transform: uppercase;
+    color: whitesmoke;
+}
+
+.textHeaders {
+    display: inline-block;
+    text-align: center;
+}
+
+.hero h2 {
+    padding: 4px 16px;
+    color: #093C5B;
+    font-family: "Andale Mono", monospace;
+    font-size: 2em;
+}
+
+.hero h1 {
+    padding: 4px 16px;
+    background-color: #093C5B;
+    font-size: 3em;
+}
+
+.animate-letter {
+    animation: blink 600ms infinite alternate;
+    margin: 0;
+}
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    background-color: #a2cfd2;
+}
+
+.hero img {
+    position: absolute;
+    top: 180px;
+    box-shadow: 0 4px 8px #093C5B;
+    border: 4px solid #093C5B;
+    border-radius: 50%;
+}
+
+#blog-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: auto;
+    padding: 60px;
+}
+
+.modal {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(9, 60, 91, 0.62);
+}
+
+.modal.active {
+    display: flex;
+}
+
+.esc {
+    position: absolute;
+    top: -60px;
+    left: 20px;
+    color:  whitesmoke;
+}
+
+.esc:before {
+    content: '[ ';
+}
+
+.esc:after {
+    content: ' ]';
+}
+
+#form {
+    position: relative;
+    width: 400px;
+    padding: 40px;
+    background-color: #a2cfd2;
+}
+
+#form input, textarea {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    border: none;
+    box-sizing: border-box;
+}
+
+#error-message {
+    text-align: center;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+    font-family: "Andale Mono", monospace;
+    color: #c30000;
+}
+
+button {
+    border: none;
+}
+
+button:focus, input:focus, textarea:focus {
+    outline: none;
+}
+
+.button {
+    display: block;
+    margin: 0 auto;
+    padding: 40px 40px;
+    background-color: #a2cfd2;
+    font-family: "Andale Mono", monospace;
+    font-size: 1.375em;
+}
+
+.button.form {
+    position: absolute;
+    bottom: -65px;
+    width: 200px;
+    left: 140px;
+    padding: 20px 20px;
+}
+
+.post {
+    width: 300px;
+    margin: 20px;
+    padding: 40px;
+    min-height: 300px;
+    font-family: "Andale Mono", monospace;
+    color: whitesmoke;
+    background-color: rgb(6, 30, 45);
+    transition: all 300ms;
+    overflow: hidden;
+}
+
+.post h2 {
+    margin-bottom: 8px;
+}
+
+.post span {
+    /*margin: 0 6px 0 0;*/
+    font-size: 14px;
+    padding: 2px 8px;
+    /*color: #cdcdcd;*/
+    background-color: #a2cfd2;
+    color: #093C5B;
+}
+
+.post span:nth-child(3) {
+    border-radius: 0 12px 12px 0;
+
+}
+
+p {
+    margin-top: 40px;
+    color: #a2cfd2;
+}
+
+@keyframes blink {
+    from {
+        background-color: transparent;
+        color: whitesmoke;
+    }
+    to {
+        background-color: whitesmoke;
+        color: #093C5B;
+    }
+}
