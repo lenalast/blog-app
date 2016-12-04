@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Jensens Blog</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 
@@ -28,7 +28,7 @@
         <input id="name" type="text" placeholder="Name">
         <input id="title" type="text" placeholder="Title">
         <textarea id="content" cols="30" rows="10" placeholder="Content text"></textarea>
-        <button class="button form" type="submit">POST</button>
+        <button id="submit-form" class="button form" type="submit">POST</button>
     </form>
 </div>
 
@@ -36,10 +36,7 @@
 <div id="blog-container"></div>
 
 
-<script src="node_modules/jquery/dist/jquery.min.js"></script>
-<script src="node_modules/moment/min/moment.min.js"></script>
-<script src="js/ajax.js"></script>
-<script src="js/main.js"></script>
-<script src="js/form.js"></script>
+
+<script src="bundle.js"></script>
 </body>
 </html>

@@ -1,27 +1,4 @@
-
-$(document).ready(init());
-
-function init() {
-
-    getPosts();
-
-    $('#open-modal').click(function () {
-        $('.modal').toggleClass('active');
-    });
-
-    $(document).keyup(function (event) {
-        if (event.keyCode === 27) {
-            $('#form').trigger('reset');
-            $('#error-message').text('');
-            $('.modal').toggleClass('active');
-
-        }
-    });
-
-
-}
-
-function renderPostElements(posts) {
+export function renderPostElements(posts) {
 
     posts.forEach(function (post) {
         var postElement = createPostElement(post);
@@ -46,5 +23,3 @@ function createPostElement(post) {
         contentElement
     );
 }
-
-

@@ -1,6 +1,7 @@
-function handleSubmitForm(event) {
-    event.preventDefault();
+import moment from 'moment';
+import { submitForm } from './ajax';
 
+export function handleSubmitForm() {
     var name = $('#name').val();
     var title = $('#title').val();
     var content = $('#content').val();

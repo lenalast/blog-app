@@ -1,4 +1,6 @@
-function getPosts() {
+import * as templates from './template';
+
+export function getPosts() {
     $.ajax({
         url: 'https://blog-33914.firebaseio.com/posts.json',
         type: 'GET',
@@ -7,13 +9,13 @@ function getPosts() {
                 value.id = key;
                 return [value];
             });
-            renderPostElements(posts);
+            templates.renderPostElements(posts);
         },
         error: error
     });
 }
 
-function submitForm(post) {
+export function submitForm(post) {
     $.ajax({
         url: 'https://blog-33914.firebaseio.com/posts.json',
         type: 'POST',
